@@ -3,6 +3,9 @@ import Hero from "./Components/Hero";
 import About from "./Components/About";
 import GoogleAd from "./Components/GoogleAd";
 import MetaAd from "./Components/Meta";
+import EmailMarketing from "./Components/Email";
+import Pages from "./Components/PAGES";
+import AppPromotion from "./Components/Promotion";
 
 export default function Home() {
   return (
@@ -12,6 +15,9 @@ export default function Home() {
       <About/>
       <GoogleAd/>
       <MetaAd/>
+      <EmailMarketing/>
+      <Pages/>
+      <AppPromotion/>
      </div>
   );
 }
