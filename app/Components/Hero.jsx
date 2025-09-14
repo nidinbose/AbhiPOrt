@@ -30,9 +30,12 @@ export default function LandingPage() {
               innovative campaigns and data-driven strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <button className="bg-[#0A2C56] text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-900">
-                Contact Me
-              </button>
+             <a href="tel:+919074603243">
+  <button className="bg-[#0A2C56] text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-900">
+    Contact Me
+  </button>
+</a>
+
               <button variant="outline" className="px-6 py-3 rounded-xl border-blue-600 text-blue-600 hover:bg-blue-100">
                 Download CV
               </button>

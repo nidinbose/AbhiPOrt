@@ -20,7 +20,7 @@ export default function GoogleAd() {
 
         {/* Images Grid */}
         <div className="grid grid-cols-1  gap-6 py-12">
-          {["G1.jpg", "G2.jpg", "G3.jpg", "G4.jpg"].map((img, i) => (
+          {["G1.jpg", "G2.jpg", "G3.jpg", "G4.jpg","G5.jpg","G6.jpg"].map((img, i) => (
             <motion.div
               key={i}
               whileHover={{ scale: 1.05 }}

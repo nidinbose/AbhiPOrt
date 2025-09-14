@@ -6,6 +6,7 @@ import MetaAd from "./Components/Meta";
 import EmailMarketing from "./Components/Email";
 import Pages from "./Components/PAGES";
 import AppPromotion from "./Components/Promotion";
+import ToolsPage from "./Components/tools";
 
 export default function Home() {
   return (
@@ -13,11 +14,13 @@ export default function Home() {
      <div className="overflow-x-hidden">
       <Hero/>
       <About/>
+      <ToolsPage/>
       <GoogleAd/>
+       <AppPromotion/>
       <MetaAd/>
       <EmailMarketing/>
       <Pages/>
-      <AppPromotion/>
+     
      </div>
   );
 }
