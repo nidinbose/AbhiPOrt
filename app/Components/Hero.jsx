@@ -1,54 +1,63 @@
 'use client'
 
-import Image from "next/image";
+import Image from "next/image"
+import { motion } from "framer-motion"
+// import { Button } from "@/components/ui/button"
 
-export default function Hero() {
+export default function LandingPage() {
   return (
-    <section className="w-full bg-white">
-      <div className="flex flex-col md:flex-row items-center justify-between container mx-auto p-6">
-        {/* Left side - Avatar */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-          <div className="relative">
-            <div className="bg-[#0A2C56] rounded-l-3xl p-6">
-              <Image
-                src="/avatar.png"   // place avatar image inside public/
-                alt="Louis Dao"
-                width={400}
-                height={400}
-                className="rounded-lg"
-              />
+    <main className="w-full bg-gradient-to-br from-white via-gray-50 to-blue-50 text-gray-900">
+      
+      {/* Hero Section */}
+      <section className="w-full py-16">
+        <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 lg:px-12">
+          {/* Left - Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="w-full md:w-1/2 text-center md:text-left space-y-6"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-[#0A2C56] mt-7">
+              Hi, I’m <span className="text-blue-600">Abijith PS</span>
+            </h1>
+            <p className="text-lg font-medium text-gray-700">
+              Digital Marketing Specialist | SEO | Meta Ads | Google Ads
+            </p>
+            <p className="text-gray-600 leading-relaxed max-w-md">
+              Results-driven marketer with proven expertise in driving online growth, 
+              building brand presence, and generating quality leads through 
+              innovative campaigns and data-driven strategies.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <button className="bg-[#0A2C56] text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-900">
+                Contact Me
+              </button>
+              <button variant="outline" className="px-6 py-3 rounded-xl border-blue-600 text-blue-600 hover:bg-blue-100">
+                Download CV
+              </button>
             </div>
-          </div>
+          </motion.div>
+
+          {/* Right - Photo */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="w-full md:w-1/2 flex justify-center"
+          >
+            <div className="relative">
+              <div className="">
+                <img
+                  src="./Images/ab1.jpg"
+                  alt="Abijith PS"
+                  className="rounded-2xl w-96 h-96"
+                />
+              </div>
+            </div>
+          </motion.div>
         </div>
-
-        {/* Right side - Content */}
-        <div className="w-full md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
-          <h1 className="text-4xl font-bold text-[#0A2C56]">Louis Dao</h1>
-          <p className="text-gray-600 text-sm">@LouisDao2024</p>
-
-          <p className="mt-4 text-lg font-semibold italic text-gray-900">
-            “Let me provide your brand’s passport to the world.”
-          </p>
-
-          <p className="mt-4 text-gray-700 leading-relaxed max-w-md">
-            Results-driven digital marketing specialist with 3 years of
-            experience driving online growth and engagement. Proven track
-            record in SEO, advertising, social media management. Passionate
-            about leveraging data-driven insights to achieve measurable
-            marketing objectives.
-          </p>
-
-          {/* Signature */}
-          <div className="mt-6">
-            <Image
-              src="/signature.png"   // place signature image inside public/
-              alt="Signature"
-              width={150}
-              height={80}
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+      </section>
+    </main>
+  )
 }
