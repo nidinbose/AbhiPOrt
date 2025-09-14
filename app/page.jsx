@@ -7,7 +7,7 @@ import MetaAd from "./Components/Meta";
 export default function Home() {
   return (
    
-     <div>
+     <div className="overflow-x-hidden">
       <Hero/>
       <About/>
       <GoogleAd/>
